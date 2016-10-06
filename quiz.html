@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
   <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -46,8 +47,33 @@
 
 <!-- Container (The Band Section) -->
 <div id="band" class="container text-center">
-  <h3>THE BAND</h3>
-  
+  <h3>THE TEST</h3>
+  <div class="grid">
+    <div id="quiz">
+      <h1 id="test-title">Search for your type of perfetion</h1>
+      <hr style="margin-top: 20px">
+      <center>
+        <button id="start-button"><span>Start the quiz</span></button>
+        <p id="question"></p>
+
+        <div class="buttons">
+
+
+          <button id="btn0"></button><span id="choice0"></span>
+          <button id="btn1"></button><span id="choice1"></span>
+          <button id="btn2"></button><span id="choice2"></span>
+          <!-- <button id="btn3"><span id="choice3"></span></button> --> 
+
+        </div>
+        <h2 id="score"></h2>
+      </center> 
+
+      <hr style="margin-top: 50px">
+      <footer>
+        <!-- <p id="progress">Question x of y</p> -->
+      </footer>
+    </div>
+  </div>
 </div>
 
 <!-- Footer -->
@@ -58,9 +84,10 @@
   <p>Bootstrap Theme Made By <a href="http://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools">www.w3schools.com</a></p>
 </footer>
 <script src="https://maps.googleapis.com/maps/api/js"></script>
+<script src="./jquery-3.1.1.min.js"></script>
 <script src="main.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+ -->
 </body>
 </html>
