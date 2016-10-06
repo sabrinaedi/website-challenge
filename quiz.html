@@ -2,18 +2,84 @@
 <html lang="en">
 <head>
   <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>Bootstrap Theme The Band</title>
+  <title>Perfect 10</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+  <script src="https://use.fontawesome.com/cd8537409e.js"></script>
   <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
-<nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default navbar-fixed-top">
+
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+
+        </button>
+
+      </div>
+
+      <div class="collapse navbar-collapse" id="myNavbar">
+
+
+        <ul class="nav navbar-nav navbar-right">
+
+          <!--blinking dollar signs -->
+
+          <li> <p id="blinkme"> <i class="fa fa-usd" aria-hidden="true"> </i> <i class="fa fa-usd" aria-hidden="true"></i> <i class="fa fa-usd" aria-hidden="true"> </i> <i class="fa fa-usd" aria-hidden="true"> </i> <i class="fa fa-usd" aria-hidden="true"> </i> <i class="fa fa-usd" aria-hidden="true"> </i> <i class="fa fa-usd" aria-hidden="true"> </i> <i class="fa fa-usd" aria-hidden="true"> </i>
+          </p></li>
+
+          <li><a href="./index.html">HOME</a></li>
+          <li><a href="./quiz.html">TRY THE TEST</a></li>
+          <li><a href="./contact.html">CONTACT</a></li>
+
+          <!--Product menu, containt the 3 products -->
+
+          <li class="dropdown">
+
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">OUR PRODUCTS
+
+              <span class="caret"> </span> </a>
+
+              <ul class="dropdown-menu">
+
+                <!-- Need to lead to a specific part of the products.html!  -->
+
+                <li><a href="./products.html#product1">On Fleek</a></li>
+                <li><a href="./products.html#product2">Flawless</a></li>
+                <li><a href="./products.html#product3">Godlike</a></li>
+
+              </ul>
+
+            </li>
+
+            <!--Below is a search icon, but it is not yet functional-->
+
+            <!-- <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="rows">
+
+      <div class="col-md-2">
+
+        <p id="titleok"> Perfect10 </p>
+
+      </div>
+      <div class="col-md-10">
+
+        
+ <!-- <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -32,19 +98,18 @@
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">PRODUCTS
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <!-- Need to lead to a specific part of the products.html!  -->
+            <! Need to lead to a specific part of the products.html! 
             <li><a href="./products.html">On Fleek</a></li>
             <li><a href="./products.html">Flawless</a></li>
             <li><a href="./products.html">Godlike</a></li>
           </ul>
         </li>
-        <!--Below is a search icon, but it is not yet functional-->
-        <!-- <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li> -->
+        <!Below is a search icon, but it is not yet functional
+        <!-<li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
       </ul>
     </div>
   </div>
-</nav>
-
+</nav> --> 
 <!-- Container (The Band Section) -->
 <div id="band" class="container text-center">
   <h3>THE TEST</h3>
@@ -77,17 +142,16 @@
 </div>
 
 <!-- Footer -->
-<footer class="text-center">
+<!-- <footer class="text-center">
   <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a><br><br>
   <p>Bootstrap Theme Made By <a href="http://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools">www.w3schools.com</a></p>
-</footer>
+</footer> -->
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <script src="./jquery-3.1.1.min.js"></script>
 <script src="main.js"></script>
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- -->
 </body>
 </html>
