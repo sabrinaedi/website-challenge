@@ -138,3 +138,94 @@ footer a:hover {
 textarea {
   resize: none;
 }
+
+.grid {
+  width: 600px;
+  height: 350px;
+  margin: 10px auto;
+  /*background-color: #fff;*/
+  padding: 10px 50px 50px 50px;
+  /*border-radius:50px;*/
+  /*border: 2px;*/
+
+  /*box-shadow: 10px 15px 5px #cbcbcb;*/
+  /*box-shadow: 0px 30px 40px rgba(0,0,0,.1);*/
+}
+
+.grid h1 {
+  font-family: "Times New Roman", Georgia, Serif;
+  /*background-color: #57636e;*/
+  font-size: 40px;
+  text-align: center;
+  padding: 2px;
+  color:  #b3b3b3;
+}
+
+.grid #question {
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #696969  ;
+}
+
+.buttons {
+  margin-top: 0 auto;
+}
+
+#btn0, #btn1, #btn2/*, #btn3 */{
+  background-color: transparent;
+  width: 7px;
+  height: 7px;
+  font-size: 10px;
+  color: white;
+  border: 2px solid #A9A9A9;
+  border-radius: 50px;
+  margin: 10px 15px 10px 40px;
+  padding: 10px 10px;
+}
+
+#btn0:hover, #btn1:hover, #btn2:hover {
+  opacity: 0.5;
+  cursor: pointer;
+  color: #57636e;
+}
+
+#btn0:focus, #btn1:focus, #btn2:focus {
+  outline: 0;
+}
+
+#result {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 20px;
+  color:  #696969;
+}
+
+#score {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 40px;
+  color: #A9A9A9;
+}
+
+#start-button {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  border: 2px solid #A9A9A9;
+  border-radius: 50%;
+
+}
+
+#start-button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  color: black;
+}
+
+#start-button:focus {
+  outline: 0;
+}
+
+#choice0, #choice1, #choice3 {
+  left: 150%;
+}
