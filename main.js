@@ -1,3 +1,4 @@
+// Initial set up to hide the elements
 $(document).ready(function() {
   $( '.buttons' ).hide()
   $( '#btn0' ).hide()
@@ -9,6 +10,8 @@ $(document).ready(function() {
   $( '#question' ).hide()
 })
 
+// Upon push of the first button show the first question
+// and, thus, start quiz
 $( '#start-button' ).click(function( ){
   $( '#start-button' ).fadeOut(500)
   $( '.buttons' ).fadeIn( 1000 )
@@ -19,40 +22,50 @@ $( '#start-button' ).click(function( ){
   $( '#choice0' ).delay(500).fadeIn( 2000 )
   $( '#choice1' ).delay(500).fadeIn( 2000 )
   $( '#choice2' ).delay(500).fadeIn( 2000 )
+  populate()
 })
 
-
 function Question( text, choices, answer, answerTwo ) {
+  // Create an object about a question with the question text, choices,
+  // answers, and add an answer evaluation function
   this.text = text
   this.choices = choices
   this.answer = answer
   this.answerTwo = answerTwo
-  this.correctAnswer = function( choice ) {
+  this.answerEvaluation = function( choice ) {
+    // the function evaluates whether the answer chosen has been
+    // this.answer or this.answerTwo, because the two have weights
     return choice === this.answer || choice === this.answerTwo
   }
 }
 
 function Quiz ( questions ) {
+  // Object for the quiz itself to count the score (Question.answer gives
+  // 1 point, Question.answerTwo gives 2 points, and the undefined answers give 
+  // no points)
   this.score = 0
   this.questions = questions
   this.questionIndex = 0
   this.getQuestionIndex = function() {
+    // return the index of the question in the list
     return this.questions[this.questionIndex]
   }
   this.isEnded = function() {
+    // checks if the quiz has ended
     return this.questions.length === this.questionIndex
   }
-}
-
-Quiz.prototype.guess = function( answer, cb ) {
-  var choices = quiz.getQuestionIndex().choices
-  $ ("#question").fadeOut(300, function(){
-    cb()
-  })
-  for(var i = 0; i < choices.length; i++) {
-    $ ("#choice" + i).text(choices[i]).fadeOut(300, function() {
+  this.guess = function ( answer, cb ) {
+    var choices = quiz.getQuestionIndex().choices
+    // jQuery used below to style the quiz; cb is a callback function
+    // for the fadeOut/fadeIn of the next questions and answers 
+    // to run smoothly
+    $ ("#question").fadeOut(300, function(){
       cb()
     })
+    for(var i = 0; i < choices.length; i++) {
+      $ ("#choice" + i).text(choices[i]).fadeOut(300, function() {
+        cb()
+      })
 // ------------------------------------------
     //   $ ("#choice" + i).text(choices[i]).animate({left: '-50%'}, 750, function() {
     //   cb()
@@ -60,35 +73,38 @@ Quiz.prototype.guess = function( answer, cb ) {
 
 
 // ------------------------------------------
-    $ ("#btn" + i).fadeOut(300, function() {
-      cb()
-    })
-  
-
-  if(this.getQuestionIndex().correctAnswer(answer)) {
-    if(this.questions[this.questionIndex].answer === answer) {
-      this.score++
-    } else {
-      this.score += 2
+      $ ("#btn" + i).fadeOut(300, function() {
+        cb()
+      })
     }
+
+
+    if(this.getQuestionIndex().answerEvaluation(answer)) {
+      if(this.questions[this.questionIndex].answer === answer) {
+        // if Question.answer is chosen, add 1 point
+        this.score++
+      } else {
+        // if Question.answerTwo is chosen, add 2 points
+        this.score += 2
+      }
+    }
+    this.questionIndex++
   }
 }
 
-  this.questionIndex++
-}
-
-
+// Create the questions of the quiz, and initialize the Quiz object, respectively
 var quest = [  
-  new Question("choose an animal?", ["bear", "pigeon", "cat"], "bear", "cat"),
-  new Question("choose a fruit?", ["apple", "grapefruit", "banana"], "banana", "grapefruit"),
-  new Question("choose a vegetable?", ["tomato", "zuccini", "cucumber"], "tomato", "zuccini"),
-  new Question("choose a fruit?", ["apple", "grapefruit", "banana"], "banana", "apple"),
-  new Question("choose a vegetable?", ["tomato", "paprika", "cucumber"], "tomato", "paprika")
+new Question("choose an animal?", ["bear", "pigeon", "cat"], "bear", "cat"),
+new Question("choose a fruit?", ["apple", "grapefruit", "banana"], "banana", "grapefruit"),
+new Question("choose a vegetable?", ["tomato", "zuccini", "cucumber"], "tomato", "zuccini"),
+new Question("choose a fruit?", ["apple", "grapefruit", "banana"], "banana", "apple"),
+new Question("choose a vegetable?", ["tomato", "paprika", "cucumber"], "tomato", "paprika")
 ]
 
 var quiz = new Quiz( quest )
 
 function populate (  ) {
+  // function used to show either the end of the quiz or the next question
   if (quiz.isEnded()) {
     showScores()
   } else {
@@ -107,6 +123,7 @@ function populate (  ) {
 }
 
 function guess (id, gs) {
+  // on button push trigger Quiz.guess function
   var button = document.getElementById(id)
   button.onclick = function () {
     quiz.guess( gs, populate )
@@ -114,23 +131,15 @@ function guess (id, gs) {
 }
 
 function showScores ( ) {
-  // var gameOverHtml = "<h1 id='result'>We suggest you get ...</h1>"
+  // Show the result of the quiz
   if (quiz.score < 2) {
-    gameOverHtml = "<h2 id='score'>... the Perfect 10 On Fleek </h2>"
     $ ("#test-title").html("<h1 id='result'>We suggest you get ...</h1>")
-    $ ('#score').html(gameOverHtml)
+    $ ('#score').html("<h2 id='score'>... the Perfect 10 On Fleek </h2>")
   } else if ( 2 <= quiz.score < 4 ) {
-    gameOverHtml = "<h2 id='score'>... the Perfect 10 Flawless </h2>"
     $ ("#test-title").html("<h1 id='result'>We suggest you get ...</h1>")
-    $ ('#score').html(gameOverHtml)
+    $ ('#score').html("<h2 id='score'>... the Perfect 10 Flawless </h2>")
   } else {
-    gameOverHtml = "<h2 id='score'>... the Perfect 10 Godlike </h2>"
     $ ("#test-title").html("<h1 id='result'>We suggest you get ...</h1>")
-    $ ('#score').html(gameOverHtml)
+    $ ('#score').html("<h2 id='score'>... the Perfect 10 Godlike </h2>")
   }
-  
-  // $ ('h2 #score').html(gameOverHtml)
 }
-
-populate()
-
