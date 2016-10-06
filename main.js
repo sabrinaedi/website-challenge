@@ -46,7 +46,6 @@ function Quiz ( questions ) {
 
 Quiz.prototype.guess = function( answer, cb ) {
   var choices = quiz.getQuestionIndex().choices
-  // $ ("#question").show('slide', {direction: 'right'}, 1000)
   $ ("#question").fadeOut(300, function(){
     cb()
   })
@@ -54,10 +53,17 @@ Quiz.prototype.guess = function( answer, cb ) {
     $ ("#choice" + i).text(choices[i]).fadeOut(300, function() {
       cb()
     })
+// ------------------------------------------
+    //   $ ("#choice" + i).text(choices[i]).animate({left: '-50%'}, 750, function() {
+    //   cb()
+    // })
+
+
+// ------------------------------------------
     $ ("#btn" + i).fadeOut(300, function() {
       cb()
     })
-  }
+  
 
   if(this.getQuestionIndex().correctAnswer(answer)) {
     if(this.questions[this.questionIndex].answer === answer) {
@@ -66,6 +72,7 @@ Quiz.prototype.guess = function( answer, cb ) {
       this.score += 2
     }
   }
+}
 
   this.questionIndex++
 }
@@ -87,7 +94,7 @@ function populate (  ) {
   } else {
     //show question
     var element = document.getElementById("question")
-    console.log(element)  // get question from html file that has ID question
+    
     $ ("#question").text(quiz.getQuestionIndex().text).fadeIn(300)
     // show choices
     var choices = quiz.getQuestionIndex().choices
@@ -110,13 +117,19 @@ function showScores ( ) {
   // var gameOverHtml = "<h1 id='result'>We suggest you get ...</h1>"
   if (quiz.score < 2) {
     gameOverHtml = "<h2 id='score'>... the Perfect 10 On Fleek </h2>"
+    $ ("#test-title").html("<h1 id='result'>We suggest you get ...</h1>")
+    $ ('#score').html(gameOverHtml)
   } else if ( 2 <= quiz.score < 4 ) {
     gameOverHtml = "<h2 id='score'>... the Perfect 10 Flawless </h2>"
+    $ ("#test-title").html("<h1 id='result'>We suggest you get ...</h1>")
+    $ ('#score').html(gameOverHtml)
   } else {
     gameOverHtml = "<h2 id='score'>... the Perfect 10 Godlike </h2>"
+    $ ("#test-title").html("<h1 id='result'>We suggest you get ...</h1>")
+    $ ('#score').html(gameOverHtml)
   }
-  $ ("h1 #test-title").html("<h1 id='result'>We suggest you get ...</h1>")
-  $ ('h2 #score').html(gameOverHtml)
+  
+  // $ ('h2 #score').html(gameOverHtml)
 }
 
 populate()

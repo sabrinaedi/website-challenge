@@ -225,3 +225,7 @@ textarea {
 #start-button:focus {
   outline: 0;
 }
+
+#choice0, #choice1, #choice3 {
+  left: 150%;
+}
