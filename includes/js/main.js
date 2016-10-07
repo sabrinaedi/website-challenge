@@ -106,7 +106,7 @@ var quiz = new Quiz( quest )
 function populate (  ) {
   // function used to show either the end of the quiz or the next question
   if (quiz.isEnded()) {
-    showScores()
+    $ ("#question").fadeOut(300, showScores())
   } else {
     //show question
     var element = document.getElementById("question")
@@ -133,17 +133,16 @@ function guess (id, gs) {
 function showScores ( ) {
   // Show the result of the quiz
   if (quiz.score < 2) {
-    $ ("#test-title").html("<h1 id='result'>We suggest you get ...</h1>")
-    $ ('#score').html("<h2 id='score'>... the Perfect 10 On Fleek </h2>")
+    $ ("#test-title").html("<h1 id='result'>We suggest you get ...</h1>").fadeIn(300)
+    $ ('#score').html("<h2 id='score'>... the Perfect 10 On Fleek </h2>").fadeIn(300)
   } else if ( 2 <= quiz.score < 4 ) {
-    $ ("#test-title").html("<h1 id='result'>We suggest you get ...</h1>")
-    $ ('#score').html("<h2 id='score'>... the Perfect 10 Flawless </h2>")
+    $ ("#test-title").html("<h1 id='result'>We suggest you get ...</h1>").fadeIn(300)
+    $ ('#score').html("<h2 id='score'>... the Perfect 10 Flawless </h2>").fadeIn(300)
   } else {
-    $ ("#test-title").html("<h1 id='result'>We suggest you get ...</h1>")
-    $ ('#score').html("<h2 id='score'>... the Perfect 10 Godlike </h2>")
+    $ ("#test-title").html("<h1 id='result'>We suggest you get ...</h1>").fadeIn(300)
+    $ ('#score').html("<h2 id='score'>... the Perfect 10 Godlike </h2>").fadeIn(300)
   }
 }
-
 
 
 /*NONO CHANGES -> GOOGLE MAPS */
