@@ -1,31 +1,31 @@
-$(document).ready(function(){
-  // Initialize Tooltip
-  $('[data-toggle="tooltip"]').tooltip();
+// $(document).ready(function(){
+//   // Initialize Tooltip
+//   $('[data-toggle="tooltip"]').tooltip();
   
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+//   // Add smooth scrolling to all links in navbar + footer link
+//   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
+//     // Make sure this.hash has a value before overriding default behavior
+//     if (this.hash !== "") {
 
-      // Prevent default anchor click behavior
-      event.preventDefault();
+//       // Prevent default anchor click behavior
+//       event.preventDefault();
 
-      // Store hash
-      var hash = this.hash;
+//       // Store hash
+//       var hash = this.hash;
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 900, function(){
+//       // Using jQuery's animate() method to add smooth page scroll
+//       // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+//       $('html, body').animate({
+//         scrollTop: $(hash).offset().top
+//       }, 900, function(){
    
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-})
+//         // Add hash (#) to URL when done scrolling (default click behavior)
+//         window.location.hash = hash;
+//       });
+//     } // End if
+//   });
+// })
 
 // Initial set up to hide the elements
 $(document).ready(function() {
@@ -37,12 +37,11 @@ $(document).ready(function() {
   $( '#choice1' ).hide()
   $( '#choice2' ).hide()
   $( '#question' ).hide()
-})
 
-// Upon push of the first button show the first question
-// and, thus, start quiz
-$( '#start-button' ).click(function( ){
-  $( '#start-button' ).fadeOut(500)
+})
+// #start-button
+ $( ".fa-play" ).click(function( ){
+  $( ".fa-play" ).fadeOut(500)
   $( '.buttons' ).fadeIn( 1000 )
   $( '#question' ).delay(500).fadeIn( 2000 )
   $( '#btn0' ).delay(500).fadeIn( 2000 )
@@ -53,6 +52,10 @@ $( '#start-button' ).click(function( ){
   $( '#choice2' ).delay(500).fadeIn( 2000 )
   populate()
 })
+
+// Upon push of the first button show the first question
+// and, thus, start quiz
+
 
 function Question( text, choices, answer, answerTwo ) {
   // Create an object about a question with the question text, choices,
@@ -132,7 +135,7 @@ new Question("Would you rather kiss:", ["a constipated clown", "a blue whale", "
 
 var quiz = new Quiz( quest )
 
-function populate (  ) {
+function populate () {
   // function used to show either the end of the quiz or the next question
   if (quiz.isEnded()) {
     $ ("#question").fadeOut(300, showScores())
