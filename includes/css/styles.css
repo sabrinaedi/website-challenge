@@ -366,15 +366,10 @@ html, body {
 }
 
 p {
-  font-size: 25px;
+  font-size: 30px;
 }
 
-.div.center {
-  vertical-align: center;
-  min-height: 50%;
+.smallFont {
+  font-size: 15px;
 }
 
-.btnBuy {
-  margin-right: 0px;
-  margin-bottom: 0px;
-}
