@@ -1,14 +1,20 @@
 html, body {
   font: 400 15px/1.8 'Open Sans', sans-serif;
-  color: #777;
+  color: black;
   height: 100%;
 }
+
+h2 {
+  margin-top: 120px;
+  margin-bottom: 50px
+}
+
 h3 {
 
   margin: 10px 0 30px 0;
-  letter-spacing: 10px;
-  font-size: 10px;
-  color: white;
+  letter-spacing: 0px;
+  font-size: 30px;
+  color: black;
 
 }
 
@@ -18,37 +24,44 @@ h4 {
   font-size: 20px;
   color: #111;
 }
+
 .container {
   padding: 80px 100px;
 }
 .container.text-center{
-    width: 1038px;
-    background-color: black;
-    font-size: 40px;
-    color: white;
-    text-align: left;
+    width: 1063px;
+    background-color: white;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+}
+
+#contactpart{
+  font-size: 25px;
+  color: black;
+  margin-top: 70px;
+}
+#contactpart2{
+    font-size: 25px;
+    color: black;
+    margin-top: 100px;
+}
 
 
-}
-.person {
-  border: 10px solid transparent;
-  margin-bottom: 25px;
-  width: 80%;
-  height: 80%;
-  opacity: 0.7;
-}
-.person:hover {
-  border-color: #f1f1f1;
-}
 .carousel-inner img {
   -webkit-filter: grayscale(90%);
   filter: grayscale(90%); /* make all photos black and white */
   width: 100%; /* Set width to 100% */
   margin: auto;
 }
+
 .carousel-caption h3 {
-  color: #fff !important;
+  color: white !important;
 }
+.carousel-caption p {
+  font-size: 15px;
+}
+
 @media (max-width: 600px) {
   .carousel-caption {
     display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
@@ -75,8 +88,6 @@ h4 {
 }
 
 
-
-
 #firstone {
   width: 100%;
   height: 100%;
@@ -84,10 +95,9 @@ h4 {
 
 #textintro {
 
-margin-top: -80px;
-margin-left: -80px;
-margin-bottom: -80px;
-
+margin-top: 30px;
+margin-left: -30px;
+margin-bottom: 30px;
 }
 
 #titleok{
@@ -105,11 +115,19 @@ margin-bottom: -80px;
 
 }
 .bg-1 {
-  background: #2d2d30;
-  color: #bdbdbd;
+  background: white;
+  color: black;
+  margin-bottom: 300px;
+  font-size: 30px;
+  text-align: center;
 }
+
 .bg-1 h3 {color: #fff;}
-.bg-1 p {font-style: italic;}
+
+.bg-1 p {
+  font :'Open Sans;'
+}
+
 .list-group-item:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
@@ -129,34 +147,28 @@ margin-bottom: -80px;
 }
 .btn {
   padding: 10px 20px;
-  background-color: #333;
-  color: #f1f1f1;
-  border-radius: 0;
+  background-color: white;
+  border-radius: 12px;
+  color: black;
   transition: .2s;
 }
 .btn:hover, .btn:focus {
-  border: 1px solid #333;
-  background-color: #fff;
-  color: #000;
+  border: 2px solid black;
+  background-color: black;
+  color: white;
 }
-.modal-header, h4, .close {
-  background-color: #333;
-  color: #fff !important;
-  text-align: center;
-  font-size: 30px;
-}
-.modal-header, .modal-body {
-  padding: 40px 50px;
-}
+
 .nav-tabs li a {
   color: #777;
 }
-#googleMap {
-  width: 100%;
+
+#map {
+  width: 80%;
   height: 400px;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
+
 .navbar {
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 0;
