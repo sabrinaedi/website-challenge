@@ -285,11 +285,25 @@ textarea {
   color: black;
 }
 
-#package-results {
-  /*text-align: center;*/
-  font-family: 'Open Sans';
-  font-size: 50px;
+#start-button {
+  font-size: 5px;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  border: 2px solid #A9A9A9;
+  border-radius: 50%;
   color: black;
+}
+
+#start-button:hover {
+  font-size: 5px;
+  opacity: 0.8;
+  cursor: pointer;
+  color: black;
+}
+
+#start-button:focus {
+  outline: 0;
 }
 
 #choice0, #choice1, #choice2 {
@@ -298,6 +312,11 @@ textarea {
   font-size: 20px;
   font-family: Open Sans;
   color: black;
+}
+
+#start-button-text {
+  font-size: 10px;
+  font-family: Open Sans;
 }
 
 .fa-play {
