@@ -144,7 +144,6 @@ function populate () {
   } else {
     //show question
     var element = document.getElementById("question")
-    
     $ ("#question").text(quiz.getQuestionIndex().text).fadeIn(300)
     // show choices
     var choices = quiz.getQuestionIndex().choices
