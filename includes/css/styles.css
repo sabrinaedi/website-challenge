@@ -219,24 +219,29 @@ textarea {
 }
 
 .grid {
-  width: 800;
-  height: 100%;
-  margin: 40px auto;
-  padding: 10px 50px 50px 50px;
+/*  width: 800;
+  height: 100%;*/
+  width: 1000px;
+  height: 800px;
+  position: absolute;
+  margin: 150px 20px 0 0;
+  padding: 10px 50px 100px 50px;
   background-color: transparent;
+  /*align-content: center;*/
 }
 
 .grid h1 {
   font-family: 'Open Sans';
-  font-size: 25px;
-  text-align: center;
-  padding: 2px;
+  font-size: 45px;
+  padding-left: 100px;
+  padding-bottom: 50px;
+  padding-right: 50px;
   color: black;
 }
 
 .grid #question {
   font-family: 'Open Sans';
-  font-size: 20px;
+  font-size: 40px;
   color: black ;
 }
 
@@ -268,20 +273,23 @@ textarea {
 
 #result {
   font-family: 'Open Sans';
-  text-align: center;
-  font-size: 30px;
+  /*text-align: center;*/
+  font-size: 50px;
   color:  black;
 }
 
 #score {
-  text-align: center;
+  /*text-align: center;*/
   font-family: 'Open Sans';
-  font-size: 30px;
+  font-size: 50px;
   color: black;
 }
 
-#start-button {
-  color: transparent;
+#package-results {
+  /*text-align: center;*/
+  font-family: 'Open Sans';
+  font-size: 50px;
+  color: black;
 }
 
 #choice0, #choice1, #choice2 {
@@ -292,16 +300,9 @@ textarea {
   color: black;
 }
 
-.container #quiz-struct{
-    width: 1038px;
-    background-color: white;
-    font-size: 25px;
-    color: black;
-    text-align: left;
-}
-
 .fa-play {
   width: 100px;
   height: 100px;
+  padding-right: 80px;
   color: black;
 }

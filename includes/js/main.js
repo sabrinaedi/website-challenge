@@ -42,6 +42,7 @@ $(document).ready(function() {
 // #start-button
  $( ".fa-play" ).click(function( ){
   $( ".fa-play" ).fadeOut(500)
+  $( "h1#test-title").fadeOut(500)
   $( '.buttons' ).fadeIn( 1000 )
   $( '#question' ).delay(500).fadeIn( 2000 )
   $( '#btn0' ).delay(500).fadeIn( 2000 )
@@ -126,11 +127,11 @@ function Quiz ( questions ) {
 
 // Create the questions of the quiz, and initialize the Quiz object, respectively
 var quest = [  
-new Question("Would you rather have:", ["four arms", "two stomachs", "five ears"], "four arms", "five ears"),
-new Question("Would you rather:", ["be rich and ugly", "own a ski lodge", "be a cat named Fluffy"], "be rich and ugly", "be a cat named Fluffy"),
-new Question("Would you rather be attacked by:", ["angry piranha", "giant hamster", "Mike Tyson"], "angry piranha", "giant hamster"),
-new Question("Would you rather eat:", ["an extra toe", "a koala", "10 million dollars"], "an extra toe", "10 million dollars"),
-new Question("Would you rather kiss:", ["a constipated clown", "a blue whale", "your dentist"], "your dentist", "a constipated clown")
+new Question("WOULD YOU RATHER HAVE:", ["FOUR ARMS", "TWO STOMACHS", "FIVE EARS"], "FOUR ARMS", "FIVE EARS"),
+new Question("WOULD YOU RATHER:", ["BE RICH AND UGLY", "OWN A SKI LODGE", "BE A CAT NAMED FLUFFY"], "BE RICH AND UGLY", "BE A CAT NAMED FLUFFY"),
+new Question("WOULD YOU RATHER BE ATTACKED BY:", ["ANGRY PIRANHA", "GIANT HAMSTER", "MIKE TYSON"], "ANGRY PIRANHA", "GIANT HAMSTER"),
+new Question("WOULD YOU RATHER EAT:", ["AN EXTRA TOE", "A KOALA", "10 MILLION DOLLARS"], "AN EXTRA TOE", "10 MILLION DOLLARS"),
+new Question("WOULD YOU RATHER KISS:", ["A CONSTIPATED CLOWN", "A BLUE WHALE", "YOUR DENTIST"], "YOUR DENTIST", "A CONSTIPATED CLOWN")
 ]
 
 var quiz = new Quiz( quest )
@@ -166,13 +167,13 @@ function showScores ( ) {
   // Show the result of the quiz
   if (quiz.score < 2) {
     $ ("#test-title").html("<h1 id='result'>We suggest you get ...</h1>").fadeIn(300)
-    $ ('#score').html("<h2 id='score'>... the Perfect 10 On Fleek </h2>").fadeIn(300)
+    $ ('#score').html("<h2 id='score'>...On Fleek </h2>").hide().delay(300).fadeIn(3000)
   } else if ( 2 <= quiz.score < 4 ) {
     $ ("#test-title").html("<h1 id='result'>We suggest you get ...</h1>").fadeIn(300)
-    $ ('#score').html("<h2 id='score'>... the Perfect 10 Flawless </h2>").fadeIn(300)
+    $ ('#score').html("<h2 id='score'>... Flawless </h2>").hide().delay(300).fadeIn(3000)
   } else {
     $ ("#test-title").html("<h1 id='result'>We suggest you get ...</h1>").fadeIn(300)
-    $ ('#score').html("<h2 id='score'>... the Perfect 10 Godlike </h2>").fadeIn(300)
+    $ ('#score').html("<h2 id='score'>... Godlike </h2>").hide().delay(300).fadeIn(3000)
   }
 }
 
