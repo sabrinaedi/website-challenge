@@ -139,7 +139,8 @@ var quiz = new Quiz( quest )
 function populate () {
   // function used to show either the end of the quiz or the next question
   if (quiz.isEnded()) {
-    $ ("#question").fadeOut(300, showScores())
+    $ ("#question").fadeOut(300)
+    showScores()
   } else {
     //show question
     var element = document.getElementById("question")
@@ -165,10 +166,10 @@ function guess (id, gs) {
 
 function showScores ( ) {
   // Show the result of the quiz
-  if (quiz.score < 2) {
+  if (quiz.score <= 3) {
     $ ("#test-title").html("<h1 id='result'>We suggest you get ...</h1>").fadeIn(300)
     $ ('#score').html("<h2 id='score'>...On Fleek </h2>").hide().delay(300).fadeIn(3000)
-  } else if ( 2 <= quiz.score < 4 ) {
+  } else if ( 4 <= quiz.score && quiz.score< 7 ) {
     $ ("#test-title").html("<h1 id='result'>We suggest you get ...</h1>").fadeIn(300)
     $ ('#score').html("<h2 id='score'>... Flawless </h2>").hide().delay(300).fadeIn(3000)
   } else {
