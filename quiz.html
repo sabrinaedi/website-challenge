@@ -7,10 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
-  <script src="https://use.fontawesome.com/cd8537409e.js"></script>
-  <link href="styles.css" rel="stylesheet" type="text/css">
+  <link href="./includes/css/styles.css" rel="stylesheet" type="text/css">
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
 
   <nav class="navbar navbar-default navbar-fixed-top">
 
@@ -51,9 +50,6 @@
               <span class="caret"> </span> </a>
 
               <ul class="dropdown-menu">
-
-                <!-- Need to lead to a specific part of the products.html!  -->
-
                 <li><a href="./products.html#product1">On Fleek</a></li>
                 <li><a href="./products.html#product2">Flawless</a></li>
                 <li><a href="./products.html#product3">Godlike</a></li>
@@ -70,7 +66,7 @@
       </div>
     </div>
   </nav>
-  <div class="rows">
+  <!-- <div class="row"> -->
 
     <div class="col-md-2">
 
@@ -78,14 +74,14 @@
 
     </div>
     <div class="col-md-10">
-      <div id="band" class="container text-center">
-        <!-- <h3>THE TEST</h3> -->
+      <!-- <div class="rows" -->
+      <div class="container-fluid text-center">
         <div class="grid">
           <div id="quiz">
-            <h1 id="test-title">Search for your type of perfetion</h1>
+            <h1 id="test-title">Search for your perfection</h1>
             <hr style="margin-top: 20px">
             <center>
-              <button id="start-button"><span id="start-button-text">Start the quiz</span></button>
+              <button id="start-button"><span id="start-button-text">Start the test</span></button>
               <p id="question"></p>
 
               <div class="buttons">
@@ -98,28 +94,18 @@
               </div>
               <h2 id="score"></h2>
             </center> 
-
-            <!-- <hr style="margin-top: 50px"> -->
-            <footer>
-              <!-- <p id="progress">Question x of y</p> -->
-            </footer>
           </div>
         </div>
       </div>
+      <font id="test" size="7">This Text!</font>
+      <button id="trybutton">Click Me!</button>
     </div>
-  </div>
-
-
-<!-- Footer -->
-<!-- <footer class="text-center">
-  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a><br><br>
-  <p>Bootstrap Theme Made By <a href="http://www.w3schools.com" data-toggle="tooltip" title="Visit w3schools">www.w3schools.com</a></p>
-</footer> -->
+  <!-- </div> -->
+<!-- <footer></footer> -->
 <script src="https://maps.googleapis.com/maps/api/js"></script>
-<script src="./jquery-3.1.1.min.js"></script>
-<script src="main.js"></script>
+<script src="https://use.fontawesome.com/cd8537409e.js"></script>
+<script src="./includes/js/jquery-3.1.1.min.js"></script>
+<script src="./includes/js/main.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
