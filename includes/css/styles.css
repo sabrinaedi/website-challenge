@@ -373,3 +373,9 @@ p {
   font-size: 15px;
 }
 
+#runner {
+  position: absolute;
+  left: 400px;
+  padding:auto;
+}
+

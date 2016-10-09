@@ -144,15 +144,21 @@ function showScores ( ) {
   }
 }
 
-$('.touchMeNot').on('mouseenter',function(e){
-    var maxX = $(window).width() - $(this).width();
-    var maxY = $(window).height() - $(this).height();    
-    $(this).css({
-        'left':getRandomInt(0, maxX),
-        'top':getRandomInt(0, maxY)
-    });
-});
-function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
 
+$('#runner').on('mouseover', function(){
+    var offset = $(this).offset();
+    var goX = Math.random() < 0.5 ? -1 : 1;
+    var goY = Math.random() < 0.5 ? -1 : 1;
+    var targetSize = 20;
+    if(goX > 0 && offset.left + targetSize * goX + targetSize> 300
+      || goX < 0 && offset.left + targetSize * goX  - targetSize < 0) {
+        goX = goX * (-1);
+    }
+    
+    if(goY > 0 && offset.top + targetSize * goY + targetSize> 200
+      || goY < 0 && offset.top + targetSize * goY - targetSize < 0) {
+        goY = goY * (-1);
+    }
+    $(this).css('top', offset.top + 20 * goY);
+    $(this).css('left', offset.left + 20 * goX);
+});

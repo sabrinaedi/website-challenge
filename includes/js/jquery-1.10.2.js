@@ -9788,14 +9788,11 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
 
 })( window );
 
-$('.touchMeNot').on('mouseenter',function(e){
-    var maxX = $(window).width() - $(this).width();
-    var maxY = $(window).height() - $(this).height();    
-    $(this).css({
-        'left':getRandomInt(0, maxX),
-        'top':getRandomInt(0, maxY)
-    });
+
+$("#runner").on('mouseover', function(){
+    var offset = $(this).offset();
+    var goX = Math.random() < 0.5 ? -1 : 1;
+    var goY = Math.random() < 0.5 ? -1 : 1;
+    $(this).css('top', offset.top + 20 * goY);
+    $(this).css('left', offset.left + 20 * goX);
 });
-function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
