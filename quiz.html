@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
   <link href="./includes/css/styles.css" rel="stylesheet" type="text/css">
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<body data-spy="scroll" data-target=".navbar" data-offset="50" id="for-quiz">
 
   <nav class="navbar navbar-default navbar-fixed-top">
 
@@ -68,27 +68,28 @@
     </div>
   </nav>
   <!-- horizontal title taken form index.html-->
-  <div class="col-md-2">
+  <div class="row">
+    <div class="col-md-2 col-xs-2 col-sm-2 col-lg-2">
 
-    <p id="titleok"> Perfect10 </p>
+      <p id="titleok"> Perfect10 </p>
+    </div>
+    <!-- the test/quiz layout!-->
+    <div class="col-md-10 col-xs-10 col-sm-10 col-lg-10">
+      <div class="grid">
+        <div id="quiz">
+          <h1 id="test-title">SEARCH FOR YOUR PERFECTION</h1>
+          <center>
+            <span class="fa fa-play fa-5x" aria-hidden="true"></span>
+            <p id="question"></p>
 
-  </div>
-  <!-- the test/quiz layout!-->
-  <div class="col-md-10">
-    <div class="grid">
-      <div id="quiz">
-        <h1 id="test-title">SEARCH FOR YOUR PERFECTION</h1>
-        <center>
-          <span class="fa fa-play fa-5x" aria-hidden="true"></span>
-          <p id="question"></p>
-
-          <div class="buttons">
-            <button id="btn0"></button><span id="choice0"></span>
-            <button id="btn1"></button><span id="choice1"></span>
-            <button id="btn2"></button><span id="choice2"></span§>
-          </div>
-          <h2 id="score"></h2>
-        </center> 
+            <div class="buttons">
+              <button id="btn0"></button><span id="choice0"></span>
+              <button id="btn1"></button><span id="choice1"></span>
+              <button id="btn2"></button><span id="choice2"></span§>
+            </div>
+            <h2 id="score"></h2>
+          </center> 
+        </div>
       </div>
     </div>
   </div>

@@ -273,13 +273,11 @@ textarea {
 
 #result {
   font-family: 'Open Sans';
-  /*text-align: center;*/
   font-size: 50px;
   color:  black;
 }
 
 #score {
-  /*text-align: center;*/
   font-family: 'Open Sans';
   font-size: 50px;
   color: black;
