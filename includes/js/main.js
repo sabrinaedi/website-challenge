@@ -187,6 +187,7 @@ function showScores ( ) {
   }
 }
 
+<<<<<<< HEAD
 /*NONO CHANGES -> GOOGLE MAPS */
 
 function initMap() {
@@ -206,6 +207,9 @@ function initMap() {
 
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> 2dede765d15b17c61cda79fa3ba6e42b3b8980ab
 $('#runner, #runnerB, #runnerC').on('mouseover', function(){
     var offset = $(this).offset();
     var goX = Math.random() < 0.5 ? -1 : 1;
@@ -222,5 +226,9 @@ $('#runner, #runnerB, #runnerC').on('mouseover', function(){
     }
     $(this).css('top', offset.top + 20 * goY);
     $(this).css('left', offset.left + 20 * goX);
+<<<<<<< HEAD
 });
 >>>>>>> tiny correction in running function
+=======
+});
+>>>>>>> 2dede765d15b17c61cda79fa3ba6e42b3b8980ab

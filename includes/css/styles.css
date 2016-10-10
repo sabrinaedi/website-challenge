@@ -318,9 +318,97 @@ textarea {
   font-family: Open Sans;
 }
 
+<<<<<<< HEAD
 .fa-play {
   width: 100px;
   height: 100px;
   padding-right: 80px;
   color: black;
+=======
+
+
+.products {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+html, body {
+    height: 100%;
+}
+
+.row-centered {
+    text-align:center;
+}
+
+.col-centered {
+    display:inline-block;
+    float:none;
+    text-align:left;
+    margin-top: 100px;
+}
+
+.mg-flip-container {
+  perspective:1000px;
+}
+.mg-flip-container:hover .mg-flip-content,
+.mg-flip-container.hover .mg-flip-content {
+  transform:rotateY(180deg);
+}
+.mg-flip-container,.front-side,.back-side {
+  width: 100%;
+}
+.mg-flip-content {
+  transition:.6s; /* Flip duration */
+  transform-style:preserve-3d;
+  position:relative;
+}
+.front-side,
+.back-side {
+  backface-visibility:hidden;
+  position:absolute;
+  top:0;
+  left:0;
+}
+.front-side {
+  z-index:2;
+  transform:rotateY(0deg);
+}
+.back-side {
+  transform:rotateY(180deg);
+  border-style: solid;
+  border-color: black;
+  background-color: white;
+}
+
+.container.back-side {
+  padding: 10px 10px 10px 10px;
+}
+
+p {
+  font-size: 30px;
+}
+
+small {
+  font-size: 25px;
+}
+
+.smallFont {
+  font-size: 15px;
+}
+
+#runner {
+  position: absolute;
+  left: 400px;
+}
+
+#runnerB {
+  position: absolute;
+  left: 400px;
+}
+
+#runnerC {
+  position: absolute;
+  left: 400px;
+>>>>>>> 2dede765d15b17c61cda79fa3ba6e42b3b8980ab
 }
