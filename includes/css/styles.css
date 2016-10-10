@@ -369,6 +369,10 @@ p {
   font-size: 30px;
 }
 
+small {
+  font-size: 25px;
+}
+
 .smallFont {
   font-size: 15px;
 }
@@ -376,6 +380,14 @@ p {
 #runner {
   position: absolute;
   left: 400px;
-  padding:auto;
 }
 
+#runnerB {
+  position: absolute;
+  left: 400px;
+}
+
+#runnerC {
+  position: absolute;
+  left: 400px;
+}
