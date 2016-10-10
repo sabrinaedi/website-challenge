@@ -37,20 +37,36 @@ $(document).ready(function(){
 // });
 })
 
-// Upon push of the first button show the first question
-// and, thus, start quiz
-$( '#start-button' ).click(function( ){
-  $( '#start-button' ).fadeOut(500)
-  $( '.buttons' ).fadeIn( 1000 )
-  $( '#question' ).delay(500).fadeIn( 2000 )
-  $( '#btn0' ).delay(500).fadeIn( 2000 )
-  $( '#btn1' ).delay(500).fadeIn( 2000 )
-  $( '#btn2' ).delay(500).fadeIn( 2000 )
-  $( '#choice0' ).delay(500).fadeIn( 2000 )
-  $( '#choice1' ).delay(500).fadeIn( 2000 )
-  $( '#choice2' ).delay(500).fadeIn( 2000 )
+// Initial set up to hide the elements
+// $(document).ready(function() {
+  // $( '.buttons' ).hide()
+  // $( '#btn0' ).hide()
+  // $( '#btn1' ).hide()
+  // $( '#btn2' ).hide()
+  // $( '#choice0' ).hide()
+  // $( '#choice1' ).hide()
+  // $( '#choice2' ).hide()
+  // $( '#question' ).hide()
+
+// })
+// #start-button
+ $( ".fa-play" ).click(function( ){
+  $( ".fa-play" ).fadeOut(500)
+  $( "h1#test-title").fadeOut(500)
+  $( '.buttons' ).fadeIn( 500 )
+  $( '#question' ).delay(500).fadeIn( 500 )
+  $( '#btn0' ).delay(500).fadeIn( 500 )
+  $( '#btn1' ).delay(500).fadeIn( 500 )
+  $( '#btn2' ).delay(500).fadeIn( 500 )
+  $( '#choice0' ).delay(500).fadeIn( 500 )
+  $( '#choice1' ).delay(500).fadeIn( 500 )
+  $( '#choice2' ).delay(500).fadeIn( 500 )
   populate()
 })
+
+// Upon push of the first button show the first question
+// and, thus, start quiz
+
 
 function Question( text, choices, answer, answerTwo ) {
   // Create an object about a question with the question text, choices,
@@ -121,23 +137,23 @@ function Quiz ( questions ) {
 
 // Create the questions of the quiz, and initialize the Quiz object, respectively
 var quest = [  
-new Question("choose an animal?", ["bear", "pigeon", "cat"], "bear", "cat"),
-new Question("choose a fruit?", ["apple", "grapefruit", "banana"], "banana", "grapefruit"),
-new Question("choose a vegetable?", ["tomato", "zuccini", "cucumber"], "tomato", "zuccini"),
-new Question("choose a fruit?", ["apple", "grapefruit", "banana"], "banana", "apple"),
-new Question("choose a vegetable?", ["tomato", "paprika", "cucumber"], "tomato", "paprika")
+new Question("WOULD YOU RATHER HAVE:", ["FOUR ARMS", "TWO STOMACHS", "FIVE EARS"], "FOUR ARMS", "FIVE EARS"),
+new Question("WOULD YOU RATHER:", ["BE RICH AND UGLY", "OWN A SKI LODGE", "BE A CAT NAMED FLUFFY"], "BE RICH AND UGLY", "BE A CAT NAMED FLUFFY"),
+new Question("WOULD YOU RATHER BE ATTACKED BY:", ["ANGRY PIRANHA", "GIANT HAMSTER", "MIKE TYSON"], "ANGRY PIRANHA", "GIANT HAMSTER"),
+new Question("WOULD YOU RATHER EAT:", ["AN EXTRA TOE", "A KOALA", "10 MILLION DOLLARS"], "AN EXTRA TOE", "10 MILLION DOLLARS"),
+new Question("WOULD YOU RATHER KISS:", ["A CONSTIPATED CLOWN", "A BLUE WHALE", "YOUR DENTIST"], "YOUR DENTIST", "A CONSTIPATED CLOWN")
 ]
 
 var quiz = new Quiz( quest )
 
-function populate (  ) {
+function populate () {
   // function used to show either the end of the quiz or the next question
   if (quiz.isEnded()) {
+    $ ("#question").fadeOut(300)
     showScores()
   } else {
     //show question
     var element = document.getElementById("question")
-    
     $ ("#question").text(quiz.getQuestionIndex().text).fadeIn(300)
     // show choices
     var choices = quiz.getQuestionIndex().choices
@@ -159,19 +175,17 @@ function guess (id, gs) {
 
 function showScores ( ) {
   // Show the result of the quiz
-  if (quiz.score < 2) {
-    $ ("#test-title").html("<h1 id='result'>We suggest you get ...</h1>")
-    $ ('#score').html("<h2 id='score'>... the Perfect 10 On Fleek </h2>")
-  } else if ( 2 <= quiz.score < 4 ) {
-    $ ("#test-title").html("<h1 id='result'>We suggest you get ...</h1>")
-    $ ('#score').html("<h2 id='score'>... the Perfect 10 Flawless </h2>")
+  if (quiz.score <= 3) {
+    $ ("#test-title").html("<h1 id='result'>We suggest you get ...</h1>").fadeIn(300)
+    $ ('#score').html("<h2 id='score'>...On Fleek </h2>").hide().delay(300).fadeIn(3000)
+  } else if ( 4 <= quiz.score && quiz.score< 7 ) {
+    $ ("#test-title").html("<h1 id='result'>We suggest you get ...</h1>").fadeIn(300)
+    $ ('#score').html("<h2 id='score'>... Flawless </h2>").hide().delay(300).fadeIn(3000)
   } else {
-    $ ("#test-title").html("<h1 id='result'>We suggest you get ...</h1>")
-    $ ('#score').html("<h2 id='score'>... the Perfect 10 Godlike </h2>")
+    $ ("#test-title").html("<h1 id='result'>We suggest you get ...</h1>").fadeIn(300)
+    $ ('#score').html("<h2 id='score'>... Godlike </h2>").hide().delay(300).fadeIn(3000)
   }
 }
-
-
 
 /*NONO CHANGES -> GOOGLE MAPS */
 
