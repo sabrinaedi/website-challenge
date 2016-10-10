@@ -284,27 +284,6 @@ textarea {
   color: black;
 }
 
-#start-button {
-  font-size: 5px;
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
-  border: 2px solid #A9A9A9;
-  border-radius: 50%;
-  color: black;
-}
-
-#start-button:hover {
-  font-size: 5px;
-  opacity: 0.8;
-  cursor: pointer;
-  color: black;
-}
-
-#start-button:focus {
-  outline: 0;
-}
-
 #choice0, #choice1, #choice2 {
   position: relative;
   top: 5px;
@@ -313,28 +292,17 @@ textarea {
   color: black;
 }
 
-#start-button-text {
-  font-size: 10px;
-  font-family: Open Sans;
-}
-
-<<<<<<< HEAD
 .fa-play {
   width: 100px;
   height: 100px;
   padding-right: 80px;
   color: black;
-=======
-
+}
 
 .products {
   width: 100%;
   height: 100%;
   min-height: 100%;
-}
-
-html, body {
-    height: 100%;
 }
 
 .row-centered {
@@ -389,10 +357,6 @@ p {
   font-size: 30px;
 }
 
-small {
-  font-size: 25px;
-}
-
 .smallFont {
   font-size: 15px;
 }
@@ -410,5 +374,4 @@ small {
 #runnerC {
   position: absolute;
   left: 400px;
->>>>>>> 2dede765d15b17c61cda79fa3ba6e42b3b8980ab
 }

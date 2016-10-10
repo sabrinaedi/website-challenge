@@ -6,94 +6,95 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=OpenSans:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-	<link href="./includes.styles.css" rel="stylesheet" type="text/css">
+	<link href="./includes/css/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	
-	
+
+
 	<nav class="navbar navbar-default navbar-fixed-top">
-		
+
 		<div class="container-fluid">
-			
+
 			<div class="navbar-header">
-				
+
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-					
+
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
-					
+
 				</button>
-				
+
 			</div>
-			
+
 			<div class="collapse navbar-collapse" id="myNavbar">
-				
-				
+
+
 				<ul class="nav navbar-nav navbar-right">
-					
+
 					<!--blinking dollar signs -->
-					
+
 					<li> <p id="blinkme"> <i class="fa fa-usd" aria-hidden="true"> </i> <i class="fa fa-usd" aria-hidden="true"></i> <i class="fa fa-usd" aria-hidden="true"> </i> <i class="fa fa-usd" aria-hidden="true"> </i> <i class="fa fa-usd" aria-hidden="true"> </i> <i class="fa fa-usd" aria-hidden="true"> </i> <i class="fa fa-usd" aria-hidden="true"> </i> <i class="fa fa-usd" aria-hidden="true"> </i>
 					</p></li>
-					
+
 					<li><a href="./index.html">HOME</a></li>
 					<li><a href="./quiz.html">TRY THE TEST</a></li>
 					<li><a href="./contact.html">CONTACT</a></li>
-					
+
 					<!--Product menu, containt the 3 products -->
-					
+
 					<li class="dropdown">
-						
+
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#">OUR PRODUCTS
-							
+
 							<span class="caret"> </span> </a>
-							
+
 							<ul class="dropdown-menu">
-								
+
 								<!-- Need to lead to a specific part of the products.html!  -->
-								
+
 								<li><a href="#product1">On Fleek</a></li>
 								<li><a href="#product2">Flawless</a></li>
 								<li><a href="#product3">Godlike</a></li>
-								
+
 							</ul>
-							
+
 						</li>
-						
+
 						<!--Below is a search icon, but it is not yet functional-->
-						
+
 						<!-- <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li> -->
 					</ul>
 				</div>
 			</div>
 		</nav>
-		
-		
+
+
 		<div class="container-fluid">
-			
+
 			<div class="col-md-2";>
-				
+
 				<p id="titleok"> Perfect10 </p>
-				
+
 			</div>
 		</div>
-		
+
 		<div id="product1" class="products">
 			<div class="container-fluid">
 				<div class="row row-centered">
 					<div class="mg-flip-container" ontouchstart="this.classList.toggle('hover');">
-						<div class="mg-flip-content col-xs-10 col-md-6 col-centered">
+						<div class="mg-flip-content col-xs-8 col-sm-5 col-md-5 col-lg-5 col-centered">
 							<div class="front-side">
-								<img src="./includes.Onfleek.jpg" class="products">
+								<img src="./includes/images/Onfleek.jpg" class="products">
 							</div>
 							<div class="back-side container">
-								<div class="col-xs-6 pull-left">
+								<div class="col-md-6 pull-left">
 									<p>Be perfect.<br> Be on fleek.</p>
 								</div>
 								<div class="col-md-6 pull-right">
+									<p><br><br></p>
 									<button class="btn" data-toggle="modal" data-target="#modalP1">Buy Now</button>
 								</div>
 							</div>
@@ -102,7 +103,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="modal fade" id="modalP1" role="dialog">
 			<div class="modal-dialog">
 				<div class="modal-content">
@@ -129,28 +130,30 @@
 						<button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
 							<span class="glyphicon glyphicon-remove"></span> Cancel
 						</button>
-						<p>Need help? Take our free <a href="./quiz.html">test!</a></p>
+						<p class="smallFont">Need help? Take our free <a href="./quiz.html">test!</a></p>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	
-	<div class="modal fade" id="paymentModalP1" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">×</button>
-					<h4>Be on fleek.</h4>
-				</div>
-				<div class="modal-body">
-					<form role="form">
-						<div class="form-group text-center">
-							<p> Congratulations, you have made the first step on your way to perfection!<br>Just one more click and you will receive our delivery within 3 working days. <br> <br> To proceed, confirm sending your brain now. <br><br>
+
+		<div class="modal fade" id="paymentModalP1" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">×</button>
+						<h4>Be on fleek.</h4>
+					</div>
+					<div class="modal-body">
+						<form role="form">
+							<div class="form-group text-center">
+								<p class="small"> Congratulations, you have made the first step on your way to perfection!<br>Just one more click and you will receive our delivery within 3 working days. <br> <br> To proceed, confirm sending your brain now. <br><br></p>
 							</div>
-							<button type="submit" class="btn btn-block" data-toggle="modal" data-target="#paymentModalP1"> Send Brain
-								<span class="glyphicon glyphicon-ok"></span>
-							</button>
+							<div id="runner">
+								<button type="submit" class="btn btn-block" data-toggle="modal" data-target="">
+									Send Brain
+									<span class="glyphicon glyphicon-ok"></span>
+								</button>
+							</div>
 						</form>
 					</div>
 					<div class="modal-footer">
@@ -162,20 +165,21 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div id="product2" class="products">
 		<div class="container-fluid">
 			<div class="row row-centered">
 				<div class="mg-flip-container" ontouchstart="this.classList.toggle('hover');">
-					<div class="mg-flip-content col-xs-10 col-md-6 col-centered">
+					<div class="mg-flip-content col-xs-8 col-sm-5 col-md-5 col-lg-5 col-centered">
 						<div class="front-side">
-							<img src="./includes.flawless.jpg" class="products">
+							<img src="./includes/images/flawless.jpg" class="products">
 						</div>
 						<div class="back-side container">
 							<div class="col-md-6 pull-left">
 								<p>Be perfect.<br> Be flawless.</p>
 							</div>
 							<div class="col-md-6 pull-right">
+								<p><br><br></p>
 								<button class="btn" data-toggle="modal" data-target="#modalP2">Buy Now</button>
 							</div>
 						</div>
@@ -184,7 +188,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="modal fade" id="modalP2" role="dialog">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -211,28 +215,31 @@
 					<button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
 						<span class="glyphicon glyphicon-remove"></span> Cancel
 					</button>
-					<p>Need help? Take our free <a href="./quiz.html">test!</a></p>
+					<p class="smallFont">Need help? Take our free <a href="./quiz.html">test!</a></p>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<div class="modal fade" id="paymentModalP2" role="dialog">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">×</button>
-				<h4>Be flawless.</h4>
-			</div>
-			<div class="modal-body">
-				<form role="form">
-					<div class="form-group text-center">
-						<p> Congratulations, you have made the first step on your way to perfection!<br>Just one more click and you will receive our delivery within 3 working days. <br> <br> To proceed, confirm sending your heart now. <br><br>
+
+	<div class="modal fade" id="paymentModalP2" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">×</button>
+					<h4>Be flawless.</h4>
+				</div>
+				<div class="modal-body">
+					<form role="form">
+						<div class="form-group text-center">
+							<p class="small"> Congratulations, you have made the first step on your way to perfection!<br>Just one more click and you will receive our delivery within 3 working days. <br> <br> To proceed, confirm sending your heart now. <br><br></p>
 						</div>
-						<button type="submit" class="btn btn-block" data-toggle="modal" data-target="#paymentModal"> Send Heart
-							<span class="glyphicon glyphicon-ok"></span>
-						</button>
+						<div id="runnerB">
+							<button type="submit" class="btn btn-block" data-toggle="modal" data-target="">
+								Send Heart
+								<span class="glyphicon glyphicon-ok"></span>
+							</button>
+						</div>
 					</form>
 				</div>
 				<div class="modal-footer">
@@ -249,15 +256,16 @@
 	<div class="container-fluid">
 		<div class="row row-centered">
 			<div class="mg-flip-container" ontouchstart="this.classList.toggle('hover');">
-				<div class="mg-flip-content col-xs-10 col-md-6 col-centered">
+				<div class="mg-flip-content col-xs-8 col-sm-5 col-md-5 col-lg-5 col-centered">
 					<div class="front-side">
-						<img src="./includes.godlike.jpg" class="products">
+						<img src="./includes/images/godlike.jpg" class="products">
 					</div>
 					<div class="back-side container">
 						<div class="col-md-6 pull-left">
 							<p>Be perfect.<br> Be godlike.</p>
 						</div>
 						<div class="col-md-6 pull-right">
+							<p><br><br></p>
 							<button class="btn" data-toggle="modal" data-target="#modalP3">Buy Now</button>
 						</div>
 					</div>
@@ -265,6 +273,7 @@
 			</div>
 		</div>
 	</div>
+</div>
 </div>
 
 <div class="modal fade" id="modalP3" role="dialog">
@@ -293,7 +302,7 @@
 				<button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
 					<span class="glyphicon glyphicon-remove"></span> Cancel
 				</button>
-				<p>Need help? Take our free <a href="./quiz.html">test!</a></p>
+				<p class="smallFont">Need help? Take our free <a href="./quiz.html">test!</a></p>
 			</div>
 		</div>
 	</div>
@@ -310,29 +319,32 @@
 			<div class="modal-body">
 				<form role="form">
 					<div class="form-group text-center">
-						<p> Congratulations, you have made the first step on your way to perfection!<br>Just one more click and you will receive our delivery within 3 working days. <br> <br> To proceed, confirm sending your soul now. <br><br>
-						</div>
-						<button type="submit" class="btn btn-block" data-toggle="modal" data-target="#paymentModal"> Send Soul
+						<p class="small"> Congratulations, you have made the first step on your way to perfection!<br>Just one more click and you will receive our delivery within 3 working days. <br> <br> To proceed, confirm sending your soul now. <br><br></p>
+					</div>
+					<div id="runnerC">
+						<button type="submit" class="btn btn-block" data-toggle="modal" data-target="">
+							Send Soul
 							<span class="glyphicon glyphicon-ok"></span>
 						</button>
-					</form>
-				</div>
-				<div class="modal-footer">
-					<button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
-						<span class="glyphicon glyphicon-remove"></span> Cancel
-					</button>
-				</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+					<span class="glyphicon glyphicon-remove"></span> Cancel
+				</button>
 			</div>
 		</div>
 	</div>
 </div>
+</div>
 
 </div>
 
-
+<script src="https://use.fontawesome.com/cd8537409e.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js"></script>
-<script src="./includes.main.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="./includes/js/jquery-3.1.1.min.js"></script>
+<script src="./includes/js/main.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </body>
