@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  // CODE PART FROM TEMPLATE
   // Initialize Tooltip
   $('[data-toggle="tooltip"]').tooltip();
   
@@ -19,12 +20,13 @@ $(document).ready(function(){
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 900, function(){
-   
+
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
     } // End if
   })
+  // CODE PART NEEDED AND WRITTEN FOR THE QUIZ
   $( '.buttons' ).hide()
   $( '#btn0' ).hide()
   $( '#btn1' ).hide()
@@ -33,24 +35,10 @@ $(document).ready(function(){
   $( '#choice1' ).hide()
   $( '#choice2' ).hide()
   $( '#question' ).hide()
-
-// });
 })
 
-// Initial set up to hide the elements
-// $(document).ready(function() {
-  // $( '.buttons' ).hide()
-  // $( '#btn0' ).hide()
-  // $( '#btn1' ).hide()
-  // $( '#btn2' ).hide()
-  // $( '#choice0' ).hide()
-  // $( '#choice1' ).hide()
-  // $( '#choice2' ).hide()
-  // $( '#question' ).hide()
-
-// })
 // #start-button
- $( ".fa-play" ).click(function( ){
+$( ".fa-play" ).click(function( ){
   $( ".fa-play" ).fadeOut(500)
   $( "h1#test-title").fadeOut(500)
   $( '.buttons' ).fadeIn( 500 )
@@ -86,10 +74,10 @@ function Quiz ( questions ) {
   // Object for the quiz itself to count the score (Question.answer gives
   // 1 point, Question.answerTwo gives 2 points, and the undefined answers give 
   // no points)
-  this.score = 0
-  this.questions = questions
-  this.questionIndex = 0
-  this.getQuestionIndex = function() {
+this.score = 0
+this.questions = questions
+this.questionIndex = 0
+this.getQuestionIndex = function() {
     // return the index of the question in the list
     return this.questions[this.questionIndex]
   }
@@ -109,13 +97,6 @@ function Quiz ( questions ) {
       $ ("#choice" + i).text(choices[i]).fadeOut(300, function() {
         cb()
       })
-// ------------------------------------------
-    //   $ ("#choice" + i).text(choices[i]).animate({left: '-50%'}, 750, function() {
-    //   cb()
-    // })
-
-
-// ------------------------------------------
       $ ("#btn" + i).fadeOut(300, function() {
         cb()
       })
@@ -191,16 +172,27 @@ function showScores ( ) {
 
 function initMap() {
         // Create a map object and specify the DOM element for display.
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 52.379, lng:  4.899},
-          scrollwheel: false,
-          zoom: 8
-        });
-      }
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 52.379, lng:  4.899},
+    scrollwheel: false,
+    zoom: 8
+  });
+}
 
+$('#runner, #runnerB, #runnerC').on('mouseover', function(){
+  var offset = $(this).offset();
+  var goX = Math.random() < 0.5 ? -1 : 1;
+  var goY = Math.random() < 0.5 ? -1 : 1;
+  var targetSize = 20;
+  if(goX > 0 && offset.left + targetSize * goX + targetSize> 300
+    || goX < 0 && offset.left + targetSize * goX  - targetSize < 0) {
+    goX = goX * (-1);
+  }
 
-
-
-
-
-
+  if(goY > 0 && offset.top + targetSize * goY + targetSize> 200
+    || goY < 0 && offset.top + targetSize * goY - targetSize < 0) {
+    goY = goY * (-1);
+  }
+  $(this).css('top', offset.top + 20 * goY);
+  $(this).css('left', offset.left + 20 * goX);
+});
