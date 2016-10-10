@@ -1,5 +1,30 @@
-// Initial set up to hide the elements
-$(document).ready(function() {
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip();
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  })
   $( '.buttons' ).hide()
   $( '#btn0' ).hide()
   $( '#btn1' ).hide()
@@ -8,6 +33,8 @@ $(document).ready(function() {
   $( '#choice1' ).hide()
   $( '#choice2' ).hide()
   $( '#question' ).hide()
+
+// });
 })
 
 // Upon push of the first button show the first question
@@ -151,8 +178,15 @@ function showScores ( ) {
 function initMap() {
         // Create a map object and specify the DOM element for display.
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
+          center: {lat: 52.379, lng:  4.899},
           scrollwheel: false,
           zoom: 8
         });
       }
+
+
+
+
+
+
+
