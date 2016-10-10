@@ -163,8 +163,9 @@ margin-bottom: 30px;
 }
 
 #map {
-  width: 80%;
+  width: 83%;
   height: 400px;
+  margin-top: 20px;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
