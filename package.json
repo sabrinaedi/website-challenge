@@ -1,0 +1,22 @@
+{
+  "name": "website-challenge",
+  "version": "0.0.1",
+  "description": "business website project with static node added",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabrinaedi/website-challenge.git"
+  },
+  "author": "Sabrina",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sabrinaedi/website-challenge/issues"
+  },
+  "homepage": "https://github.com/sabrinaedi/website-challenge#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
